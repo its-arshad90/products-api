@@ -17,5 +17,7 @@ public class Product {
     public String getName() { return name; }
     public double getPrice() { return price; }
 
+    // Getters are required: without getName(), Jackson drops "name" from the JSON
+
 
 }
