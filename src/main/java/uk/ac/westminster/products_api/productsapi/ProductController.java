@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/products")
 public class ProductController {
     @GetMapping("/{id}")
-    public product getById(@PathVariable Long id) {
-        return new product(id, "Laptop", 999.99);
+    public Product getById(@PathVariable Long id) {
+        return new Product(id, "Laptop", 999.99);
     }
 }
