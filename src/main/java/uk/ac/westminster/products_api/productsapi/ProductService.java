@@ -12,6 +12,14 @@ public class ProductService {
     private List<Product> products = new ArrayList<>();
     private Long nextId = 1L;
 
+    public ProductService() {
+        DigitalProduct dp1 = new DigitalProduct(nextId++, "mouse",33.5,"https://example.com",756.56);
+        PhysicalProduct pp1 = new PhysicalProduct(nextId++,"laptop",55.5,15.8,"3D");
+
+        products.add(dp1);
+        products.add(pp1);
+    }
+
     public List<Product> getAllProducts(){
         return products;
     }
@@ -37,6 +45,8 @@ public class ProductService {
                 .filter(p -> p.getName().contains(name) )
                 .toList();
     }
+
+
 
 
 }
