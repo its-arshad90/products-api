@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(DigitalProduct.class),
         @JsonSubTypes.Type(PhysicalProduct.class)})
 
-public class Product {
+public abstract class Product {
     private Long id;
     private String name;
     private double price;
@@ -30,5 +30,7 @@ public class Product {
 
     // Getters are required: without getName(), Jackson drops "name" from the JSON
 
+    public abstract String getSummary();
 
-}
+
+    }
